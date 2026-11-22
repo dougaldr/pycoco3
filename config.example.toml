@@ -1,0 +1,10 @@
+# Supply your own raw 32 KB CoCo 3 system ROM.
+rom = "/path/to/coco3.rom"
+ram_kb = 128
+
+# Optional Disk BASIC ROM (8/16 KB raw, or ZIP containing disk11.rom).
+# disk_rom = "/path/to/disk11.rom"
+# disk0 = "disks/work.dsk"
+# disk0_writable = true
+# disk1 = "/path/to/read-only-game.dsk"
+# Drives 0 through 3 default to read-only unless explicitly enabled.

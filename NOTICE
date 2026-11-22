@@ -1,0 +1,42 @@
+PyCoCo3
+Licensed under the GNU General Public License, version 3 or later.
+
+This project uses VCC (Virtual Color Computer) as an implementation reference:
+https://github.com/VCCE/VCC
+Reference revision: c7046c2e48d5056409fc22897df7b22193d666fa
+
+VCC is Copyright 2015 Joseph Forgione and subsequent contributors,
+and is distributed under GPL-3.0-or-later.
+
+coco/fonts.py contains converted bitmap data from VCC's cc2font.h and cc3font.h,
+Copyright 2015 Joseph Forgione, GPL-3.0-or-later.
+The CPU, memory/register, keyboard and video implementations were written in
+Python with reference to VCC's mc6809.cpp, tcc1014mmu.cpp, tcc1014registers.cpp,
+mc6821.cpp, keyboardLayout.cpp, tcc1014graphics.cpp and tcc1014graphics.h.
+They are distributed under the same GPL-3.0-or-later license.
+
+The Python audio, disk and event-timing implementations also use VCC's
+mc6821.cpp, FD502/wd1793.cpp, tcc1014graphics.cpp and tcc1014graphics.h as
+behavioral references. MAME's gime.cpp and coco_fdc.cpp were consulted to
+cross-check frame latching, timer revision offsets and disk interface signals:
+https://github.com/mamedev/mame/blob/master/src/mame/trs/gime.cpp
+https://github.com/mamedev/mame/blob/master/src/devices/bus/coco/coco_fdc.cpp
+CPU bus sequencing was subsequently adapted with reference to MAME's
+src/devices/cpu/m6809/m6809.lst, base6x09.lst and m6809.h (Nathan Woods).
+DMK parsing was cross-checked against src/lib/formats/dmk_dsk.cpp (Wilbert Pol).
+These references carry BSD-3-Clause licenses; their attribution and terms are
+retained in LICENSE-MAME. The Python implementations integrate with the GPL
+project. Source references were consulted on 2026-11-21.
+
+HFE and SCP format support was implemented using the published HxC HFE and
+SuperCard Pro specifications. HFE v3 opcode semantics were cross-checked against
+Keir Fraser's public-domain FlashFloppy implementation; continuous SCP flux
+interval handling was cross-checked against his public-domain Greaseweazle
+implementation. These projects and specifications are acknowledged here:
+https://hxc2001.com/floppy_drive_emulator/HFE-file-format.html
+https://www.cbmstuff.com/downloads/scp/scp_image_specs.txt
+https://github.com/keirf/FlashFloppy/blob/master/src/image/hfe.c
+https://github.com/keirf/greaseweazle/blob/master/src/greaseweazle/image/scp.py
+
+CoCo system ROMs are user-supplied and are not included in this project.
+The included LICENSE contains the full GPL version 3 text.

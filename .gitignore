@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.DS_Store
+config.local.toml
+disks/
+*.rom
+*.bin
+artifacts/
+*.dsk
+*.vdk
+*.dmk
+*.hfe
+*.scp
